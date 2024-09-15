@@ -5,21 +5,12 @@ body {
     padding: 0;
     background-color: #000;
     color: #fff;
-    font-size: 1vw; /* Responsive font size */
-    flex-wrap: wrap;
 }
 
 .container {
-    max-width: 100%; /* Auto scale for all screens */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-}
-
-/* Set max-width for extra-large screens */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1200px; /* Limit to max-width on larger screens */
-    }
 }
 
 header {
@@ -29,7 +20,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 header .logo {
@@ -71,7 +61,7 @@ nav .menu a:hover {
     background-color: #ff6600;
     color: #fff;
     border: none;
-    padding: 10px 25px;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     margin: 0 5px;
@@ -82,31 +72,46 @@ nav .menu a:hover {
     background-color: #e65c00;
 }
 
+/* Responsive styling for Login and Sign Up buttons */
+@media (max-width: 576px) {
+    .auth {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .auth button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
 /* Hero Section */
 h1, h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #ff6600;
-    font-size: 3vw; /* Scales based on viewport */
 }
 
 .hero {
     background-color: #111;
-    padding: 5vw;
+    padding: 30px;
     border-radius: 5px;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .hero-content {
     display: flex;
-    flex-direction: column; /* Adjusted for responsiveness */
+    flex-direction: row;
     width: 100%;
-    gap: 2vw;
+    gap: 20px;
 }
 
 .hero-text {
     flex: 1;
-    font-size: 1.5vw; /* Responsive font size */
 }
 
 .video-slide {
@@ -115,7 +120,7 @@ h1, h2 {
 
 .video-slide iframe {
     width: 100%;
-    height: auto;
+    height: 315px;
     border: none;
 }
 
@@ -131,7 +136,6 @@ h1, h2 {
     transform: translateY(0);
 }
 
-/* Additional Transitions for Zoom-In Effect */
 .animated.zoom-in {
     opacity: 1;
     transform: scale(1);
@@ -151,7 +155,7 @@ h1, h2 {
     border-radius: 5px;
     cursor: pointer;
     margin: 0 10px;
-    font-size: 2vw; /* Responsive button size */
+    font-size: 16px;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -165,63 +169,35 @@ h1, h2 {
     box-shadow: 0 0 0 2px #ff6600;
 }
 
-#play-video-btn {
+#play-video-btn, #book-now-btn {
     background-color: #ff6600;
 }
 
-#play-video-btn:hover {
+#play-video-btn:hover, #book-now-btn:hover {
     background-color: #e65c00;
 }
 
-#book-now-btn {
-    background-color: #ff6600;
-}
-
-#book-now-btn:hover {
-    background-color: #e65c00;
-}
-
-/* Statistics, Services, Looking For, and Featured Gamers Sections */
+/* Statistics, Services, and Other Sections */
 .statistics, .services, .looking-for, .gamers {
     margin-bottom: 30px;
-}
-
-.statistics {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #222;
-    color: #fff;
-    padding: 20px;
-}
-
-.statistic {
-    flex: 1;
-    text-align: center;
-    margin: 10px;
-    min-width: 150px;
-}
-
-.statistic h2 {
-    margin-bottom: 10px;
-    color: #ff6600;
-}
-
-.services, .looking-for, .gamers {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.service, .looking-for-option, .gamer {
-    width: 100%;
-    max-width: 300px;
+.statistic, .service, .looking-for-option, .gamer {
+    text-align: center;
+    margin: 10px;
+    min-width: 150px;
     padding: 20px;
     background-color: #111;
     border-radius: 5px;
-    text-align: center;
     border: 1px solid #333;
+}
+
+.statistic h2 {
+    color: #ff6600;
 }
 
 .service img, .gamer img {
@@ -233,7 +209,7 @@ h1, h2 {
 /* Footer Section */
 footer {
     background-color: #111;
-    padding: 0px 20px;
+    padding: 20px;
     border-top: 1px solid #333;
     color: #fff;
 }
@@ -245,64 +221,58 @@ footer {
     gap: 20px;
 }
 
-.footer-section {
+.footer-quote-section, .footer-nav-section {
     flex: 1;
-}
-
-.footer-quote-section {
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .footer-quote {
-    font-style: italic;
-    font-size: 1.5vw;
-    margin-bottom: 20px;
+    font-size: 16px;
     text-align: left;
 }
 
+/* Footer Social Icons */
 .footer-social {
     display: flex;
     gap: 15px;
+    justify-content: center;
 }
 
-.social-icon img {
+.footer-social .social-icon img {
     width: 30px;
     height: 30px;
     transition: opacity 0.3s ease;
 }
 
-.social-icon img:hover {
+.footer-social .social-icon img:hover {
     opacity: 0.7;
 }
 
-.footer-nav-section {
-    max-width: 50%;
-}
+/* Responsive adjustments for footer and social icons */
+@media (max-width: 576px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-.footer-nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+    .footer-quote {
+        text-align: center;
+    }
 
-.footer-nav li {
-    margin: 10px 0;
-}
+    .footer-social .social-icon img {
+        width: 25px;
+        height: 25px;
+    }
 
-.footer-nav a {
-    color: #ff6600;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.footer-nav a:hover {
-    color: #e65c00;
-}
-
-.footer-copyright {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 1.2vw;
+    .footer-nav li {
+        margin: 5px 0;
+    }
 }
 
 /* Modal Styles */
@@ -320,9 +290,10 @@ footer {
 
 .modal-content {
     background: #222;
-    padding: 5vw;
+    padding: 30px;
     border-radius: 10px;
-    max-width: 90%; /* Scale modal to fit small screens */
+    max-width: 600px;
+    width: 100%;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -372,34 +343,25 @@ footer {
     background-color: #e65c00;
 }
 
-/* Media Queries for Responsive Design */
-@media (max-width: 992px) {
-    body {
-        font-size: 1.5vw;
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .hero {
-        padding: 7vw;
+    .statistics {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .cta button {
-        font-size: 3vw;
-        padding: 2vw 4vw;
-    }
-}
-
-@media (max-width: 576px) {
-    body {
-        font-size: 2vw;
+    .statistic {
+        margin: 10px 0;
     }
 
-    .hero {
-        padding: 10vw;
-    }
-
-    .cta button {
-        font-size: 4vw;
-        padding: 2.5vw 5vw;
+    .service, .looking-for-option, .gamer {
+        width: 100%;
+        max-width: none;
     }
 
     .video-slide iframe {
