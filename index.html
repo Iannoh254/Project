@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://img.icons8.com/?size=100&id=Pd3ADg6p7068&format=png&color=FD7E14" alt="GameZone Logo">
+        </div>
+        <nav>
+            <div class="menu">
+                <a href="/">Home</a>
+                <a href="/Games">Games</a>
+                <a href="/Community">Community</a>
+                <a href="/Events">Events</a>
+                <a href="/AboutUs">About us</a>
+            </div>
+        </nav>
+        <div class="auth">
+            <button id="header-login-btn">Log in</button>
+            <button id="header-signup-btn">Sign Up</button>
+        </div>
+    </header>    
+    <main>
+        <div class="container">
+            <h1 class="fade-in">Level Up Your Gaming Experience</h1>
+            <div class="hero fade-in">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2>Welcome to GameZone</h2>
+                        <p>Your ultimate destination for the latest and greatest games, events, and community engagement.</p>
+                        <div class="cta">
+                            <button id="play-video-btn">Play Video</button>
+                            <button id="book-now-btn">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="video-slide">
+                        <iframe id="video-slide" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="statistics zoom-in">
+                <div class="statistic">
+                    <h2>99%</h2>
+                    <p>Player Satisfaction</p>
+                </div>
+                <div class="statistic">
+                    <h2>10,000+</h2>
+                    <p>Active Gamers</p>
+                </div>
+                <div class="statistic">
+                    <h2>500+</h2>
+                    <p>Games Available</p>
+                </div>
+                <div class="statistic">
+                    <h2>24/7</h2>
+                    <p>Support</p>
+                </div>
+            </div>
+
+            <h2 class="fade-in">Top Games</h2>
+            <div class="services fade-in">
+                <div class="service">
+                    <img src="https://img.icons8.com/?size=100&id=15005&format=png&color=FD7E14" alt="Action Icon">
+                    <h3>Action</h3>
+                    <p>Experience adrenaline-pumping action with our top picks.</p>
+                </div>
+                <div class="service">
+                    <img src="https://img.icons8.com/?size=100&id=r80HiZqZUUM0&format=png&color=FD7E14" alt="Adventure Icon">
+                    <h3>Adventure</h3>
+                    <p>Embark on epic journeys and explore new worlds.</p>
+                </div>
+                <div class="service">
+                    <img src="https://img.icons8.com/?size=100&id=48534&format=png&color=FD7E14" alt="Strategy Icon">
+                    <h3>Strategy</h3>
+                    <p>Sharpen your skills and outwit your opponents.</p>
+                </div>
+                <div class="service">
+                    <img src="https://img.icons8.com/?size=100&id=QieEAdOSR6SQ&format=png&color=FD7E14" alt="Multiplayer Icon">
+                    <h3>Multiplayer</h3>
+                    <p>Join forces with friends or compete with players worldwide.</p>
+                </div>
+            </div>
+
+            <h2 class="fade-in">Looking For:</h2>
+            <div class="looking-for fade-in">
+                <div class="looking-for-option">
+                    <h3>Esports</h3>
+                    <p>Join competitive tournaments and prove your skills.</p>
+                </div>
+                <div class="looking-for-option">
+                    <h3>Streamers</h3>
+                    <p>Watch live streams from your favorite gamers.</p>
+                </div>
+                <div class="looking-for-option">
+                    <h3>Game Reviews</h3>
+                    <p>Read expert reviews and player feedback.</p>
+                </div>
+                <div class="looking-for-option">
+                    <h3>Game Guides</h3>
+                    <p>Get tips and tricks to master your favorite games.</p>
+                </div>
+            </div>
+
+            <h2 class="fade-in">Featured Gamers</h2>
+            <div class="gamers fade-in">
+                <div class="gamer">
+                    <img src="https://img.icons8.com/?size=100&id=117315&format=png&color=FD7E14" alt="Gamer 1">
+                    <h3>Gamer 1</h3>
+                    <p>Top Player in Action Games</p>
+                </div>
+                <div class="gamer">
+                    <img src="https://img.icons8.com/?size=100&id=ZFO-Ioy7jtFp&format=png&color=FD7E14" alt="Gamer 2">
+                    <h3>Gamer 2</h3>
+                    <p>Strategy Game Specialist</p>
+                </div>
+                <div class="gamer">
+                    <img src="https://img.icons8.com/?size=100&id=115318&format=png&color=FD7E14" alt="Gamer 3">
+                    <h3>Gamer 3</h3>
+                    <p>Adventure Enthusiast</p>
+                </div>
+                <div class="gamer">
+                    <img src="https://img.icons8.com/?size=100&id=123524&format=png&color=FD7E14" alt="Gamer 4">
+                    <h3>Gamer 4</h3>
+                    <p>Multiplayer Master</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span id="login-close" class="modal-close">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span id="signup-close" class="modal-close">&times;</span>
+            <h2>Sign Up</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" name="email" required><br>
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="password" required><br>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal">
+        <div class="modal-content booking-form">
+            <span id="booking-close" class="modal-close">&times;</span>
+            <h2>Book a GameZone Space</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required><br>
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required><br>
+                <label for="number-of-people">Number of People:</label>
+                <input type="number" id="number-of-people" name="number-of-people" required><br>
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-quote-section">
+                    <p class="footer-quote">"Gaming is not just a hobby; it's a way to challenge yourself and escape reality."</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com" target="_blank" class="social-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook">
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter">
+                        </a>
+                        <a href="https://discord.com" target="_blank" class="social-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/ffffff/discord.png" alt="Discord">
+                        </a>
+                        <a href="https://twitch.tv" target="_blank" class="social-icon">
+                            <img src="https://img.icons8.com/ios-filled/50/ffffff/twitch.png" alt="Twitch">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section footer-nav-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/Games">Games</a></li>
+                        <li><a href="/Community">Community</a></li>
+                        <li><a href="/Events">Events</a></li>
+                        <li><a href="/AboutUs">About Us</a></li>
+                        <li><a href="/TermsAndConditions">Terms and Conditions</a></li>
+                        <li><a href="/CustomerCare">Customer Care</a></li>
+                        <li><a href="/HelpAndSupport">Help and Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 GameZone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS File -->
+    <script src="script.js"></script>
+</body>
+</html>

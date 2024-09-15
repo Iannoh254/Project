@@ -1,0 +1,408 @@
+/* General Styles */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #111;
+    padding: 20px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    flex: 1;
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+nav {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav .menu {
+    display: flex;
+    gap: 20px;
+}
+
+nav .menu a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+nav .menu a:hover {
+    text-decoration: underline;
+}
+
+.auth {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.auth button:hover {
+    background-color: #e65c00;
+}
+
+/* Hero Section */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff6600;
+}
+
+.hero {
+    background-color: #111;
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.video-slide {
+    flex: 1;
+}
+
+.video-slide iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+}
+/* Scroll Animation Styles */
+.animated {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animated.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Additional Transitions for Zoom-In Effect */
+.animated.zoom-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.zoom-in {
+    transform: scale(0.8);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+
+/* Buttons */
+.cta button {
+    background-color: #ff6600; /* Orange background */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta button:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.cta button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #ff6600; /* Orange outline on focus */
+}
+
+/* Specific styles for Play Video and Book Now buttons */
+#play-video-btn {
+    background-color: #ff6600; /* Orange background */
+}
+
+#play-video-btn:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+}
+
+#book-now-btn {
+    background-color: #ff6600; /* Orange background */
+}
+
+#book-now-btn:hover {
+    background-color: #e65c00; /* Darker orange on hover */
+}
+
+/* Statistics, Services, Looking For, and Featured Gamers Sections */
+.statistics, .services, .looking-for, .doctors {
+    margin-bottom: 30px;
+}
+
+.statistics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+}
+
+.statistic {
+    flex: 1;
+    text-align: center;
+    margin: 10px;
+    min-width: 150px;
+}
+
+.statistic h2 {
+    margin-bottom: 10px;
+    color: #ff6600;
+}
+
+.services, .looking-for, .gamers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service, .looking-for-option, .gamer {
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #111;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.service img, .gamer img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #111;
+    padding: 0px 20px;
+    border-top: 1px solid #333;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-quote-section {
+    max-width: 50%;
+}
+
+.footer-quote {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon img:hover {
+    opacity: 0.7;
+}
+
+.footer-nav-section {
+    max-width: 50%;
+}
+
+.footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav li {
+    margin: 10px 0;
+}
+
+.footer-nav a {
+    color: #ff6600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #e65c00;
+}
+
+.footer-copyright {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-quote-section, .footer-nav-section {
+        max-width: 100%;
+    }
+
+    .footer-quote {
+        text-align: center;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #ff6600;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin: 10px 0 5px;
+}
+
+.modal-content input {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background: #000;
+    color: #fff;
+}
+
+.modal-content button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #e65c00;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .statistics {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .statistic {
+        margin: 10px 0;
+    }
+
+    .service, .looking-for-option, .doctor {
+        width: 100%;
+        max-width: none;
+    }
+
+    .video-slide iframe {
+        height: auto;
+    }
+}
