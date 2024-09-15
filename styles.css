@@ -64,16 +64,17 @@ nav .menu a:hover {
     flex: 1;
     display: flex;
     justify-content: flex-end;
+    gap: 10px;
 }
 
 .auth button {
     background-color: #ff6600;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 25px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 10px;
+    margin: 0 5px;
     transition: background-color 0.3s ease;
 }
 
