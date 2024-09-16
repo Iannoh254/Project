@@ -10,8 +10,8 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1200px;  /* Ensuring max width on large screens */
-    padding: 0 20px;    /* Padding for smaller screens */
+    max-width: 1200px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 
@@ -21,31 +21,37 @@ header {
     padding: 1rem 2rem;
     border-bottom: 1px solid #333;
     display: flex;
+    flex-wrap: wrap; /* Ensure wrapping */
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;    /* Allow wrapping on smaller screens */
+}
+
+header .logo {
+    flex: 1;
 }
 
 header .logo img {
-    max-width: 100%;   /* Ensure logo scales */
+    max-width: 100%;
     height: auto;
 }
 
 nav {
+    flex: 2;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Ensure wrapping */
     justify-content: flex-end;
 }
 
 nav .menu {
     display: flex;
-    gap: 1rem;   /* Flexible gap */
+    gap: 1rem;
+    flex-wrap: wrap; /* Ensure menu wraps */
 }
 
 nav .menu a {
     color: #ff6600;
     text-decoration: none;
-    font-size: 1rem;   /* Scalable font size */
+    font-size: 1rem;
 }
 
 nav .menu a:hover {
@@ -54,8 +60,9 @@ nav .menu a:hover {
 
 .auth {
     display: flex;
+    gap: 1rem;
     justify-content: flex-end;
-    gap: 1rem;  /* Flexible gap */
+    flex-wrap: wrap; /* Ensure buttons wrap */
 }
 
 .auth button {
@@ -78,21 +85,21 @@ nav .menu a:hover {
     padding: 3rem 2rem;
     border-radius: 5px;
     display: flex;
-    flex-wrap: wrap;    /* Enable wrapping */
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
 .hero-content {
     display: flex;
-    flex-direction: column; /* Stacking on smaller screens */
+    flex-direction: column;
     gap: 1.5rem;
     flex: 1;
 }
 
 .video-slide {
     width: 100%;
-    max-width: 600px;    /* Limit video width on large screens */
+    max-width: 600px;
     margin: 0 auto;
 }
 
@@ -124,29 +131,6 @@ nav .menu a:hover {
     box-shadow: 0 0 0 2px #ff6600;
 }
 
-/* Statistics, Services, and Sections */
-.statistics, .services, .looking-for, .gamers {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
-}
-
-.statistic, .service, .looking-for-option, .gamer {
-    background-color: #111;
-    padding: 2rem;
-    border-radius: 5px;
-    flex: 1 1 200px;  /* Flexible sizing */
-    max-width: 300px; /* Limit max size */
-    text-align: center;
-    border: 1px solid #333;
-}
-
-.statistic h2 {
-    color: #ff6600;
-}
-
 /* Footer Section */
 footer {
     background-color: #111;
@@ -163,7 +147,7 @@ footer {
 }
 
 .footer-quote, .footer-nav {
-    flex: 1 1 300px; /* Flexible sizing */
+    flex: 1 1 300px;
 }
 
 .footer-social {
@@ -200,7 +184,7 @@ footer {
     padding: 2rem;
     border-radius: 10px;
     max-width: 600px;
-    width: 90%;   /* Ensure modals scale to smaller screens */
+    width: 90%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -218,19 +202,29 @@ footer {
 }
 
 /* Media Queries */
-@media (min-width: 768px) {
-    .hero-content {
-        flex-direction: row; /* Horizontal on medium+ screens */
+@media (max-width: 992px) {
+    /* Stack navigation and auth buttons under logo on smaller screens */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .cta {
-        flex-direction: row;
+    nav {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .auth {
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 1rem;
     }
 }
 
 @media (max-width: 576px) {
     .auth {
         flex-direction: column;
+        align-items: center;
         width: 100%;
     }
 
