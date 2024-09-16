@@ -8,14 +8,15 @@ body {
 }
 
 .container {
+    width: 100%;
     max-width: 1200px;
+    padding: 2vw; /* Using vw for responsive padding */
     margin: 0 auto;
-    padding: 20px;
 }
 
 header {
     background-color: #111;
-    padding: 20px;
+    padding: 2vw; /* Fluid padding */
     border-bottom: 1px solid #333;
     display: flex;
     justify-content: space-between;
@@ -38,7 +39,7 @@ nav {
 
 nav .menu {
     display: flex;
-    gap: 20px;
+    gap: 2vw; /* Fluid gap */
 }
 
 nav .menu a {
@@ -54,17 +55,17 @@ nav .menu a:hover {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 1vw;
 }
 
 .auth button {
     background-color: #ff6600;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 0.8rem 1.5rem; /* Using rem for padding */
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 5px;
+    margin: 0 0.5rem;
     transition: background-color 0.3s ease;
 }
 
@@ -89,32 +90,30 @@ nav .menu a:hover {
 /* Hero Section */
 h1, h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 2vw;
     color: #ff6600;
 }
 
 .hero {
     background-color: #111;
-    padding: 30px;
+    padding: 3vw;
     border-radius: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 3vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .hero-content {
     display: flex;
     flex-direction: row;
     width: 100%;
-    gap: 20px;
+    gap: 2vw;
+    flex-wrap: wrap;
 }
 
-.hero-text {
-    flex: 1;
-}
-
-.video-slide {
+.hero-text, .video-slide {
     flex: 1;
 }
 
@@ -151,11 +150,11 @@ h1, h2 {
     background-color: #ff6600;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 0.8rem 1.5rem;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 10px;
-    font-size: 16px;
+    margin: 0 1vw;
+    font-size: 1rem; /* Responsive font size */
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -179,21 +178,22 @@ h1, h2 {
 
 /* Statistics, Services, and Other Sections */
 .statistics, .services, .looking-for, .gamers {
-    margin-bottom: 30px;
+    margin-bottom: 3vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 2vw;
 }
 
 .statistic, .service, .looking-for-option, .gamer {
     text-align: center;
-    margin: 10px;
+    margin: 1vw;
     min-width: 150px;
-    padding: 20px;
+    padding: 2vw;
     background-color: #111;
     border-radius: 5px;
     border: 1px solid #333;
+    flex: 1;
 }
 
 .statistic h2 {
@@ -209,7 +209,7 @@ h1, h2 {
 /* Footer Section */
 footer {
     background-color: #111;
-    padding: 20px;
+    padding: 2vw;
     border-top: 1px solid #333;
     color: #fff;
 }
@@ -218,7 +218,7 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 2vw;
 }
 
 .footer-quote-section, .footer-nav-section {
@@ -227,14 +227,14 @@ footer {
 }
 
 .footer-quote {
-    font-size: 16px;
+    font-size: 1rem;
     text-align: left;
 }
 
 /* Footer Social Icons */
 .footer-social {
     display: flex;
-    gap: 15px;
+    gap: 1.5vw;
     justify-content: center;
 }
 
@@ -290,7 +290,7 @@ footer {
 
 .modal-content {
     background: #222;
-    padding: 30px;
+    padding: 3vw;
     border-radius: 10px;
     max-width: 600px;
     width: 100%;
@@ -300,9 +300,9 @@ footer {
 
 .modal-close {
     position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
     color: #fff;
     cursor: pointer;
 }
@@ -317,14 +317,14 @@ footer {
 }
 
 .modal-content label {
-    margin: 10px 0 5px;
+    margin: 1rem 0 0.5rem;
 }
 
 .modal-content input {
-    padding: 10px;
+    padding: 1rem;
     border: 1px solid #333;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
     background: #000;
     color: #fff;
 }
@@ -333,7 +333,7 @@ footer {
     background-color: #ff6600;
     color: #fff;
     border: none;
-    padding: 10px;
+    padding: 1rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -366,5 +366,12 @@ footer {
 
     .video-slide iframe {
         height: auto;
+    }
+}
+
+/* Media Queries for Extra Large Screens (1200px+) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
     }
 }
