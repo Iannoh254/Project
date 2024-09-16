@@ -5,46 +5,47 @@ body {
     padding: 0;
     background-color: #000;
     color: #fff;
+    line-height: 1.6;
 }
 
 .container {
     width: 100%;
-    max-width: 1200px;
-    padding: 2vw; /* Using vw for responsive padding */
+    max-width: 1200px;  /* Ensuring max width on large screens */
+    padding: 0 20px;    /* Padding for smaller screens */
     margin: 0 auto;
 }
 
+/* Header Styles */
 header {
     background-color: #111;
-    padding: 2vw; /* Fluid padding */
+    padding: 1rem 2rem;
     border-bottom: 1px solid #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-header .logo {
-    flex: 1;
+    flex-wrap: wrap;    /* Allow wrapping on smaller screens */
 }
 
 header .logo img {
-    max-width: 150px;
+    max-width: 100%;   /* Ensure logo scales */
+    height: auto;
 }
 
 nav {
-    flex: 2;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
 }
 
 nav .menu {
     display: flex;
-    gap: 2vw; /* Fluid gap */
+    gap: 1rem;   /* Flexible gap */
 }
 
 nav .menu a {
     color: #ff6600;
     text-decoration: none;
+    font-size: 1rem;   /* Scalable font size */
 }
 
 nav .menu a:hover {
@@ -52,20 +53,18 @@ nav .menu a:hover {
 }
 
 .auth {
-    flex: 1;
     display: flex;
     justify-content: flex-end;
-    gap: 1vw;
+    gap: 1rem;  /* Flexible gap */
 }
 
 .auth button {
     background-color: #ff6600;
     color: #fff;
     border: none;
-    padding: 0.8rem 1.5rem; /* Using rem for padding */
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 0.5rem;
     transition: background-color 0.3s ease;
 }
 
@@ -73,88 +72,45 @@ nav .menu a:hover {
     background-color: #e65c00;
 }
 
-/* Responsive styling for Login and Sign Up buttons */
-@media (max-width: 576px) {
-    .auth {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .auth button {
-        width: 100%;
-        margin: 5px 0;
-    }
-}
-
 /* Hero Section */
-h1, h2 {
-    text-align: center;
-    margin-bottom: 2vw;
-    color: #ff6600;
-}
-
 .hero {
     background-color: #111;
-    padding: 3vw;
+    padding: 3rem 2rem;
     border-radius: 5px;
-    margin-bottom: 3vw;
     display: flex;
+    flex-wrap: wrap;    /* Enable wrapping */
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .hero-content {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 2vw;
-    flex-wrap: wrap;
+    flex-direction: column; /* Stacking on smaller screens */
+    gap: 1.5rem;
+    flex: 1;
 }
 
-.hero-text, .video-slide {
-    flex: 1;
+.video-slide {
+    width: 100%;
+    max-width: 600px;    /* Limit video width on large screens */
+    margin: 0 auto;
 }
 
 .video-slide iframe {
     width: 100%;
-    height: 315px;
+    height: auto;
     border: none;
 }
 
-/* Scroll Animation Styles */
-.animated {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.animated.fade-in {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.animated.zoom-in {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.zoom-in {
-    transform: scale(0.8);
-    transition: transform 0.5s, opacity 0.5s;
-}
-
-/* Buttons */
+/* Call to Action (CTA) Buttons */
 .cta button {
     background-color: #ff6600;
     color: #fff;
     border: none;
-    padding: 0.8rem 1.5rem;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 1vw;
-    font-size: 1rem; /* Responsive font size */
+    font-size: 1rem;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -168,48 +124,33 @@ h1, h2 {
     box-shadow: 0 0 0 2px #ff6600;
 }
 
-#play-video-btn, #book-now-btn {
-    background-color: #ff6600;
-}
-
-#play-video-btn:hover, #book-now-btn:hover {
-    background-color: #e65c00;
-}
-
-/* Statistics, Services, and Other Sections */
+/* Statistics, Services, and Sections */
 .statistics, .services, .looking-for, .gamers {
-    margin-bottom: 3vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2vw;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .statistic, .service, .looking-for-option, .gamer {
-    text-align: center;
-    margin: 1vw;
-    min-width: 150px;
-    padding: 2vw;
     background-color: #111;
+    padding: 2rem;
     border-radius: 5px;
+    flex: 1 1 200px;  /* Flexible sizing */
+    max-width: 300px; /* Limit max size */
+    text-align: center;
     border: 1px solid #333;
-    flex: 1;
 }
 
 .statistic h2 {
     color: #ff6600;
 }
 
-.service img, .gamer img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
 /* Footer Section */
 footer {
     background-color: #111;
-    padding: 2vw;
+    padding: 2rem 1rem;
     border-top: 1px solid #333;
     color: #fff;
 }
@@ -218,23 +159,16 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 2vw;
+    gap: 1.5rem;
 }
 
-.footer-quote-section, .footer-nav-section {
-    flex: 1;
-    max-width: 100%;
+.footer-quote, .footer-nav {
+    flex: 1 1 300px; /* Flexible sizing */
 }
 
-.footer-quote {
-    font-size: 1rem;
-    text-align: left;
-}
-
-/* Footer Social Icons */
 .footer-social {
     display: flex;
-    gap: 1.5vw;
+    gap: 1rem;
     justify-content: center;
 }
 
@@ -246,33 +180,6 @@ footer {
 
 .footer-social .social-icon img:hover {
     opacity: 0.7;
-}
-
-/* Responsive adjustments for footer and social icons */
-@media (max-width: 576px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-quote {
-        text-align: center;
-    }
-
-    .footer-social .social-icon img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .footer-nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-nav li {
-        margin: 5px 0;
-    }
 }
 
 /* Modal Styles */
@@ -290,18 +197,17 @@ footer {
 
 .modal-content {
     background: #222;
-    padding: 3vw;
+    padding: 2rem;
     border-radius: 10px;
     max-width: 600px;
-    width: 100%;
-    position: relative;
+    width: 90%;   /* Ensure modals scale to smaller screens */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .modal-close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 10px;
+    right: 20px;
     font-size: 2rem;
     color: #fff;
     cursor: pointer;
@@ -311,67 +217,33 @@ footer {
     color: #ff6600;
 }
 
-.modal-content form {
-    display: flex;
-    flex-direction: column;
-}
-
-.modal-content label {
-    margin: 1rem 0 0.5rem;
-}
-
-.modal-content input {
-    padding: 1rem;
-    border: 1px solid #333;
-    border-radius: 5px;
-    margin-bottom: 1.5rem;
-    background: #000;
-    color: #fff;
-}
-
-.modal-content button {
-    background-color: #ff6600;
-    color: #fff;
-    border: none;
-    padding: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.modal-content button:hover {
-    background-color: #e65c00;
-}
-
 /* Media Queries */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .hero-content {
+        flex-direction: row; /* Horizontal on medium+ screens */
+    }
+
+    .cta {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 576px) {
+    .auth {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .auth button {
+        width: 100%;
+    }
+
+    .footer-content {
         flex-direction: column;
         align-items: center;
     }
 
-    .statistics {
-        flex-direction: column;
+    .footer-quote {
         text-align: center;
-    }
-
-    .statistic {
-        margin: 10px 0;
-    }
-
-    .service, .looking-for-option, .gamer {
-        width: 100%;
-        max-width: none;
-    }
-
-    .video-slide iframe {
-        height: auto;
-    }
-}
-
-/* Media Queries for Extra Large Screens (1200px+) */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1200px;
     }
 }
