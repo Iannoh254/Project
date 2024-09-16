@@ -13,11 +13,13 @@ body {
     padding: 20px;
 }
 
+/* Header Styles */
 header {
     background-color: #111;
     padding: 20px;
     border-bottom: 1px solid #333;
     display: flex;
+    flex-wrap: wrap; /* Ensure header contents can wrap */
     justify-content: space-between;
     align-items: center;
 }
@@ -33,12 +35,14 @@ header .logo img {
 nav {
     flex: 2;
     display: flex;
+    flex-wrap: wrap; /* Enable wrapping for navigation items */
     justify-content: flex-end;
 }
 
 nav .menu {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap; /* Wrap navigation items when necessary */
 }
 
 nav .menu a {
@@ -54,6 +58,7 @@ nav .menu a:hover {
     flex: 1;
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap; /* Allow buttons to wrap */
     gap: 10px;
 }
 
