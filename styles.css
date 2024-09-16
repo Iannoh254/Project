@@ -5,54 +5,45 @@ body {
     padding: 0;
     background-color: #000;
     color: #fff;
-    line-height: 1.6;
 }
 
 .container {
-    width: 100%;
     max-width: 1200px;
-    padding: 0 20px;
     margin: 0 auto;
+    padding: 20px;
 }
 
-/* Header Styles */
 header {
     background-color: #111;
-    padding: 1rem 2rem;
+    padding: 20px;
     border-bottom: 1px solid #333;
     display: flex;
-    flex-wrap: wrap; /* Ensure wrapping */
     justify-content: space-between;
     align-items: center;
 }
 
 header .logo {
-    flex: 1 1 auto;
-    max-width: 150px;
+    flex: 1;
 }
 
 header .logo img {
-    max-width: 100%;
-    height: auto;
+    max-width: 150px;
 }
 
 nav {
-    flex: 1 1 auto;
+    flex: 2;
     display: flex;
-    flex-wrap: wrap;
     justify-content: flex-end;
 }
 
 nav .menu {
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap; /* Ensure menu wraps */
+    gap: 20px;
 }
 
 nav .menu a {
     color: #ff6600;
     text-decoration: none;
-    font-size: 1rem;
 }
 
 nav .menu a:hover {
@@ -60,11 +51,10 @@ nav .menu a:hover {
 }
 
 .auth {
-    flex: 0 0 auto;
+    flex: 1;
     display: flex;
-    gap: 1rem;
     justify-content: flex-end;
-    flex-wrap: wrap; /* Ensure buttons wrap */
+    gap: 10px;
 }
 
 .auth button {
@@ -74,6 +64,7 @@ nav .menu a:hover {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    margin: 0 5px;
     transition: background-color 0.3s ease;
 }
 
@@ -81,25 +72,7 @@ nav .menu a:hover {
     background-color: #e65c00;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 992px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav {
-        justify-content: flex-start;
-        width: 100%;
-    }
-
-    .auth {
-        justify-content: flex-start;
-        width: 100%;
-        margin-top: 1rem;
-    }
-}
-
+/* Responsive styling for Login and Sign Up buttons */
 @media (max-width: 576px) {
     .auth {
         flex-direction: column;
@@ -109,6 +82,289 @@ nav .menu a:hover {
 
     .auth button {
         width: 100%;
-        margin-bottom: 0.5rem;
+        margin: 5px 0;
+    }
+}
+
+/* Hero Section */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff6600;
+}
+
+.hero {
+    background-color: #111;
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.video-slide {
+    flex: 1;
+}
+
+.video-slide iframe {
+    width: 100%;
+    height: 315px;
+    border: none;
+}
+
+/* Scroll Animation Styles */
+.animated {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animated.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animated.zoom-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.zoom-in {
+    transform: scale(0.8);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+/* Buttons */
+.cta button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta button:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);
+}
+
+.cta button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #ff6600;
+}
+
+#play-video-btn, #book-now-btn {
+    background-color: #ff6600;
+}
+
+#play-video-btn:hover, #book-now-btn:hover {
+    background-color: #e65c00;
+}
+
+/* Statistics, Services, and Other Sections */
+.statistics, .services, .looking-for, .gamers {
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.statistic, .service, .looking-for-option, .gamer {
+    text-align: center;
+    margin: 10px;
+    min-width: 150px;
+    padding: 20px;
+    background-color: #111;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.statistic h2 {
+    color: #ff6600;
+}
+
+.service img, .gamer img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #111;
+    padding: 20px;
+    border-top: 1px solid #333;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-quote-section, .footer-nav-section {
+    flex: 1;
+    max-width: 100%;
+}
+
+.footer-quote {
+    font-size: 16px;
+    text-align: left;
+}
+
+/* Footer Social Icons */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.footer-social .social-icon img {
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social .social-icon img:hover {
+    opacity: 0.7;
+}
+
+/* Responsive adjustments for footer and social icons */
+@media (max-width: 576px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-quote {
+        text-align: center;
+    }
+
+    .footer-social .social-icon img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-nav li {
+        margin: 5px 0;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #ff6600;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin: 10px 0 5px;
+}
+
+.modal-content input {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background: #000;
+    color: #fff;
+}
+
+.modal-content button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #e65c00;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .statistics {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .statistic {
+        margin: 10px 0;
+    }
+
+    .service, .looking-for-option, .gamer {
+        width: 100%;
+        max-width: none;
+    }
+
+    .video-slide iframe {
+        height: auto;
     }
 }
