@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - GameZone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/">
+                <img src="https://img.icons8.com/?size=100&id=Pd3ADg6p7068&format=png&color=FD7E14" alt="GameZone Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/Games" class="active">Games</a></li>
+                <li><a href="/Community">Community</a></li>
+                <li><a href="/Events">Events</a></li>
+                <li><a href="/AboutUs">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Explore Our Games</h1>
+
+        <!-- Search and Filter Section -->
+        <div class="filter-section">
+            <input type="text" id="search-bar" placeholder="Search games..." onkeyup="searchGames()">
+            <select id="category-filter" onchange="filterGames()">
+                <option value="all">All Categories</option>
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="strategy">Strategy</option>
+                <option value="multiplayer">Multiplayer</option>
+            </select>
+        </div>
+
+        <!-- Games Grid -->
+        <div class="games-container" id="games-container">
+            <!-- Game Items Will Be Loaded Dynamically -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GameZone. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
